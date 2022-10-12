@@ -244,7 +244,7 @@ def bag_player(bagfile=''):
     def ply_clk(arg):
         if play_btn.description == "Play":
             info_dict = yaml.load(subprocess.Popen(['rosbag', 'info', '--yaml', bgpath_txt.value],
-                                                   stdout=subprocess.PIPE).communicate()[0])
+                                                   stdout=subprocess.PIPE).communicate()[0], Loader=yaml.FullLoader)
             if info_dict is None:
                 raise FileNotFoundError("Bag file not found!")
             else:

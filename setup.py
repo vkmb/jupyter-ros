@@ -56,7 +56,8 @@ setup_args = dict(
         'bqplot',
         'numpy',
         'rospkg',
-        'ipycanvas'
+        'ipycanvas',
+        'pyyaml>=5.1'
     ],
     extras_require = {
         'dev': ['click','jupyter_releaser==0.22']
